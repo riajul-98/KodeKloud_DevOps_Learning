@@ -4,7 +4,7 @@ Some packages such as web servers or database servers may need to be running and
 ## Commands
 - `service httpd start`: Starts the specified service (older method)
 - `systemctl start httpd`: Starts the specified service (newer method)
-- `systemctl stop httpd`: Stops 
+- `systemctl stop httpd`: Stops the service.
 - `systemctl status https`: Checks the status of the given service.
 - `systemctl enable httpd`: Enables the service to start at system boot.
 - `systemctl disable httpd`: Disables service from starting up at system boot.
