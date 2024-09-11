@@ -21,4 +21,5 @@ There will also be other rocket related commands. These are:
 4. `rocket-status`: Gives the status of a rocket
 5. `rocket-debug`: Debugs issues with rocket in case of failure
 
-I have added all the scripts which they have used to create these commands in the "Rocket command scripts" folder.
+I have added all the scripts which they have used to create these commands in the "Rocket command scripts" folder. To add these scripts as a command, you will need to add the path to these scripts to $PATH by running the following command;
+`export PATH=$PATH:<Path to scripts>`
