@@ -1,0 +1,25 @@
+#!/bin/bash
+
+mission_name=$1
+
+mkdir $mission_name
+
+rocket-add $mission_name
+rocket-start-power $mission_name
+rocket-internal-power $mission_name
+rocket-start-sequence $mission_name
+rocket-start-engine $mission_name
+rocket-lift-off $mission_name
+
+rocket-status=$(rocket-status $mission_name)
+echo "Status of launch: $rocket_status"
+
+if [ $rocket_status = "failed" ]
+then
+    rocket-debug $mission_name
+elif [ $rocket_status = "success" ]
+then
+    echo "Launch was successful"
+else
+    echo "The state is not failed or successful."
+fi
