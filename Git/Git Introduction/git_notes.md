@@ -20,4 +20,4 @@ To check the status of any changes, you can run the `git status` command. Untrac
 Before committing, you would need to configure git to add a name and email address to allow others to know these changes have been made by you. To do this, you would run `git config user.name <name>` and `git config user.email <email address>`.
 
 # Git Log
-To view previous commits, you can run the `git log` command. This provides the git hash, the author name, the date commited and the commit message. You can get less information using the `git commit --oneline` command. 
+To view previous commits, you can run the `git log` command. This provides the git hash, the author name, the date commited and the commit message. You can get less information using the `git commit --oneline` command. You can also list the files chnaged using the `git log --name-only` command.
