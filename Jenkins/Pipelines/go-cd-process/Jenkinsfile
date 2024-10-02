@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+    tools {
+        go "go-1.23.2"
+    }
+
+    environment {
+        GO111MODULE="on"
+    }
+
+    stages {
+        stage("Development") {
+            steps {
+                git "https://github.com/ybkuroki/go-webapp-sample.git"
+                sh "go test ./..."
+            }
+        }
+
+        stage("Build image") {
+            steps {
+                script{
+                    app = docker.build("riajul98/go-webapp-sample")
+                }
+            }
+        }
+    }
+}

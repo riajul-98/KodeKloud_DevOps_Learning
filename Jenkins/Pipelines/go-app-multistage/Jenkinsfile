@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+
+    stages {
+        stage("Pull code") {
+            steps {
+                git "https://github.com/ybkuroki/go-webapp-sample.git"
+            }
+        }
+        stage("UAT") {
+            steps {
+                echo "Running unit tests"
+            }
+        }
+    }
+}
