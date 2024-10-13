@@ -1,0 +1,5 @@
+# Networking
+Nodes have assigned IP addresses which we use to access the node, SSH into it, etc. The node contains a pod which contains a container. Unlike docker, the container does not have an IP address assigned to it, rather, it is the pod which has an IP address. Each pod in kubernetes gets it own internal IP address. When Kubernetes is first configured, an internal private IP address is created and all the pods are attached to it. All pods get a different IP address. The pods are able to communicate to each other through this network. 
+
+## Cluster Networking
+When you have multiple nodes in your cluster, the pods in the nodes may have the same internal IP address. This may result in conflicts. In order to correctly configure the networking for clusters, we can use external services such as Cillium, Flannel, and Calico.
